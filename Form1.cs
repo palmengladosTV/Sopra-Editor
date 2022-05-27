@@ -71,7 +71,7 @@ namespace Editor
             
 
             // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))          
+            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))          
                 e.Handled = true;
             
 
@@ -138,6 +138,8 @@ namespace Editor
             gbScenOptions.Height = tb42y * comboBoxHeight + (tb42y + 1) * padding + fieldY;
             gbExportOptions.Location = new Point(gbExportOptions.Location.X, gbScenOptions.Location.Y + gbScenOptions.Height + padding);
             this.Size = new Size(this.Width, gbExportOptions.Location.Y + 2*gbExportOptions.Height);
+
+            lstCb.Clear();
 
             for (int i = 0; i < tb42x; i++)
             {
