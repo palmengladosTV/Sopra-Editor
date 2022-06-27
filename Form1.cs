@@ -146,7 +146,7 @@ namespace Editor
                 for(int j = 0; j < tb42y; j++)
                 {
                     lstCb.Add(new ComboBox());
-                    lstCb[j + i * tb42y].Items.AddRange(new object[] { "CITY", "MOUNTAINS", "PLATEAU", "DUNE", "FLAT_SAND" });
+                    lstCb[j + i * tb42y].Items.AddRange(new object[] { "CITY", "MOUNTAINS", "PLATEAU", "DUNE", "FLAT_SAND", "HELIPORT" });
                     lstCb[j + i * tb42y].SelectedIndex = 4;
                     lstCb[j + i * tb42y].Width = comboBoxWidth;
                     lstCb[j + i * tb42y].Location = new Point(i * comboBoxWidth + (i + 1) * padding, fieldY + j*comboBoxHeight + (j+1)*padding);
