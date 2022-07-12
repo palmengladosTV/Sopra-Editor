@@ -121,6 +121,12 @@
             this.textBox42y = new System.Windows.Forms.TextBox();
             this.label42_Mul = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.textBox42 = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.textBox43 = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.textBox44 = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
             this.gbScenOptions = new System.Windows.Forms.GroupBox();
             this.btnGenScen = new System.Windows.Forms.Button();
             this.gbExportOptions = new System.Windows.Forms.GroupBox();
@@ -761,9 +767,9 @@
             this.label32.AutoSize = true;
             this.label32.Location = new System.Drawing.Point(163, 24);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(71, 15);
+            this.label32.Size = new System.Drawing.Size(77, 15);
             this.label32.TabIndex = 14;
-            this.label32.Text = "Action Time";
+            this.label32.Text = "Action T. Usr.";
             // 
             // textBox32
             // 
@@ -965,6 +971,12 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.textBox42);
+            this.groupBox6.Controls.Add(this.label43);
+            this.groupBox6.Controls.Add(this.textBox43);
+            this.groupBox6.Controls.Add(this.label44);
+            this.groupBox6.Controls.Add(this.textBox44);
+            this.groupBox6.Controls.Add(this.label45);
             this.groupBox6.Controls.Add(this.label42_Mul);
             this.groupBox6.Controls.Add(this.textBox42y);
             this.groupBox6.Controls.Add(this.textBox42x);
@@ -993,15 +1005,66 @@
             this.groupBox6.Controls.Add(this.label31);
             this.groupBox6.Location = new System.Drawing.Point(12, 211);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(622, 110);
+            this.groupBox6.Size = new System.Drawing.Size(622, 148);
             this.groupBox6.TabIndex = 15;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Game options";
             // 
+            // textBox42
+            // 
+            this.textBox42.Location = new System.Drawing.Point(403, 106);
+            this.textBox42.Name = "textBox42";
+            this.textBox42.Size = new System.Drawing.Size(54, 23);
+            this.textBox42.TabIndex = 47;
+            this.textBox42.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFilterInt);
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(320, 111);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(64, 15);
+            this.label43.TabIndex = 46;
+            this.label43.Text = "maxStrikes";
+            // 
+            // textBox43
+            // 
+            this.textBox43.Location = new System.Drawing.Point(246, 106);
+            this.textBox43.Name = "textBox43";
+            this.textBox43.Size = new System.Drawing.Size(54, 23);
+            this.textBox43.TabIndex = 45;
+            this.textBox43.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFilterFloat);
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(163, 111);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(50, 15);
+            this.label44.TabIndex = 44;
+            this.label44.Text = "Crash %";
+            // 
+            // textBox44
+            // 
+            this.textBox44.Location = new System.Drawing.Point(89, 106);
+            this.textBox44.Name = "textBox44";
+            this.textBox44.Size = new System.Drawing.Size(54, 23);
+            this.textBox44.TabIndex = 43;
+            this.textBox44.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFilterFloat);
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(6, 111);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(68, 15);
+            this.label45.TabIndex = 42;
+            this.label45.Text = "Action T. AI";
+            // 
             // gbScenOptions
             // 
             this.gbScenOptions.Controls.Add(this.btnGenScen);
-            this.gbScenOptions.Location = new System.Drawing.Point(12, 327);
+            this.gbScenOptions.Location = new System.Drawing.Point(12, 365);
             this.gbScenOptions.Name = "gbScenOptions";
             this.gbScenOptions.Size = new System.Drawing.Size(622, 53);
             this.gbScenOptions.TabIndex = 16;
@@ -1024,7 +1087,7 @@
             this.gbExportOptions.Controls.Add(this.btnLoadDefaults);
             this.gbExportOptions.Controls.Add(this.btnExportScenOptions);
             this.gbExportOptions.Controls.Add(this.btnExportGameOptions);
-            this.gbExportOptions.Location = new System.Drawing.Point(12, 386);
+            this.gbExportOptions.Location = new System.Drawing.Point(12, 424);
             this.gbExportOptions.Name = "gbExportOptions";
             this.gbExportOptions.Size = new System.Drawing.Size(622, 53);
             this.gbExportOptions.TabIndex = 17;
@@ -1206,5 +1269,11 @@
         private Button btnExportGameOptions;
         private Button btnClearAll;
         private Button btnLoadDefaults;
+        private TextBox textBox42;
+        private Label label43;
+        private TextBox textBox43;
+        private Label label44;
+        private TextBox textBox44;
+        private Label label45;
     }
 }

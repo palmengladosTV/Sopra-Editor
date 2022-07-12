@@ -226,16 +226,19 @@ namespace Editor
                     ["healingHP"] = int.Parse(textBox28.Text)
                 },
                 ["numbOfRounds"] = int.Parse(textBox31.Text),
-                ["actionTime"] = float.Parse(textBox32.Text),
+                ["actionTimeUserClient"] = float.Parse(textBox32.Text),
+                ["actionTimeAiClient"] = float.Parse(textBox44.Text),
                 ["highGroundBonusRatio"] = float.Parse(textBox33.Text),
                 ["lowGroundMalusRatio"] = float.Parse(textBox34.Text),
                 ["kanlySuccessProbability"] = float.Parse(textBox35.Text),
                 ["spiceMinimum"] = int.Parse(textBox36.Text),
-                ["cellularAutomation"] = textBox41.Text,
+                ["cellularAutomaton"] = textBox41.Text,
                 ["sandWormSpeed"] = int.Parse(textBox37.Text),
                 ["sandWormSpawnDistance"] = int.Parse(textBox38.Text),
                 ["cloneProbability"] = float.Parse(textBox39.Text),
-                ["minPauseTime"] = int.Parse(textBox40.Text)
+                ["minPauseTime"] = int.Parse(textBox40.Text),
+                ["crashProbability"] = float.Parse(textBox43.Text),
+                ["maxStrikes"] = int.Parse(textBox42.Text)
             };
 
             sfd = new SaveFileDialog();
@@ -338,19 +341,22 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
             textBox25.Text = "8";
 
             //Game options
-            textBox31.Text = "10";
-            textBox32.Text = "0,5";
+            textBox31.Text = "5";
+            textBox32.Text = "20000";
             textBox33.Text = "0,5";
-            textBox34.Text = "0,5";
+            textBox34.Text = "1,5";
             textBox35.Text = "0,5";
             textBox36.Text = "10";
-            textBox37.Text = "10";
-            textBox38.Text = "10";
+            textBox37.Text = "3";
+            textBox38.Text = "4";
             textBox39.Text = "0,5";
-            textBox40.Text = "10";
-            textBox41.Text = "S2/B3";
+            textBox40.Text = "10000";
+            textBox41.Text = "B12/S3";
             textBox42x.Text = "5";
             textBox42y.Text = "5";
+            textBox42.Text = "10";
+            textBox43.Text = "0,5";
+            textBox44.Text = "1000";
 
             tb41_success = true;
             tb42_success = true;
