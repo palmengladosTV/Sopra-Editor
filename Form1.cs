@@ -173,10 +173,17 @@ namespace Editor
         private bool checkScenOptions()
         {
             int numberOfCities = 0;
-            foreach (Control c in gbScenOptions.Controls)           
-                if(c is ComboBox && (c as ComboBox).SelectedIndex == 0)             
+            int numberOfHeliports = 0;
+            foreach (Control c in gbScenOptions.Controls)
+            {
+                if (c is ComboBox && (c as ComboBox).SelectedIndex == 0)
                     numberOfCities++;
-            return numberOfCities == 2;
+                if (c is ComboBox && (c as ComboBox).SelectedIndex == 5)
+                    numberOfHeliports++;
+
+            }
+
+            return (numberOfCities == 2 && (numberOfHeliports == 2 || numberOfHeliports == 0));
         }
 
         private void btnExportGameOptions_Click(object sender, EventArgs e)
@@ -252,9 +259,9 @@ namespace Editor
             
             if(sfd.ShowDialog() == DialogResult.OK)
             {
-                string filename = sfd.FileName.Replace(".party.json", "");
+                string filename = sfd.FileName;
                 filename = filename.Replace(".json", "");
-                File.WriteAllText((filename + ".party.json"), jsonString);
+                File.WriteAllText((filename + ".json"), jsonString);
             }
 
         }
@@ -300,45 +307,45 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             if(sfd.ShowDialog() == DialogResult.OK)
             {
-                string filename = sfd.FileName.Replace(".scenario.json", "");
+                string filename = sfd.FileName;
                 filename = filename.Replace(".json", "");
-                File.WriteAllText((filename + ".scenario.json"), jsonString);
+                File.WriteAllText((filename + ".json"), jsonString);
             }
         }
 
         private void btnLoadDefaults_Click(object sender, EventArgs e)
         {
             //Noble
-            textBox7.Text = "20";
-            textBox8.Text = "4";
-            textBox9.Text = "6";
-            textBox10.Text = "21";
-            textBox11.Text = "22";
-            textBox12.Text = "8";
+            textBox7.Text = "100";
+            textBox8.Text = "20";
+            textBox9.Text = "10";
+            textBox10.Text = "2";
+            textBox11.Text = "2";
+            textBox12.Text = "5";
 
             //Mentat
-            textBox18.Text = "20";
-            textBox17.Text = "4";
-            textBox16.Text = "6";
-            textBox15.Text = "21";
-            textBox14.Text = "22";
-            textBox13.Text = "8";
+            textBox18.Text = "75";
+            textBox17.Text = "10";
+            textBox16.Text = "10";
+            textBox15.Text = "2";
+            textBox14.Text = "3";
+            textBox13.Text = "10";
 
             //Bene Gesserit
-            textBox24.Text = "20";
-            textBox23.Text = "4";
-            textBox22.Text = "6";
-            textBox21.Text = "21";
-            textBox20.Text = "22";
-            textBox19.Text = "8";
+            textBox24.Text = "150";
+            textBox23.Text = "20";
+            textBox22.Text = "20";
+            textBox21.Text = "3";
+            textBox20.Text = "2";
+            textBox19.Text = "5";
 
             //Fighter
-            textBox30.Text = "20";
-            textBox29.Text = "4";
-            textBox28.Text = "6";
-            textBox27.Text = "21";
-            textBox26.Text = "22";
-            textBox25.Text = "8";
+            textBox30.Text = "200";
+            textBox29.Text = "40";
+            textBox28.Text = "20";
+            textBox27.Text = "2";
+            textBox26.Text = "2";
+            textBox25.Text = "3";
 
             //Game options
             textBox31.Text = "5";
