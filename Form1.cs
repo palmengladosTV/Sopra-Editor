@@ -106,7 +106,7 @@ namespace Editor
 
             (sender as TextBox).ForeColor = Color.Black;
 
-            if ((Int32.Parse((sender as TextBox).Text) < 4) || (Int32.Parse((sender as TextBox).Text) > 16)){
+            if ((Int32.Parse((sender as TextBox).Text) < 4) || (Int32.Parse((sender as TextBox).Text) > 20)){
                 tb42_success = false;
                 (sender as TextBox).ForeColor= Color.Red;
             }
@@ -121,7 +121,7 @@ namespace Editor
             if (!tb42_success)
             {
                 MessageBox.Show("Error whilst generating field options.\nPlease make sure that you entered valid dimensions!\n" +
-                    "(Minimum: 4; Maximum: 16)", "Error generating field options",
+                    "(Minimum: 4; Maximum: 20)", "Error generating field options",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -363,7 +363,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
             textBox42y.Text = "5";
             textBox42.Text = "10";
             textBox43.Text = "0,5";
-            textBox44.Text = "1000";
+            textBox44.Text = "10000";
 
             tb41_success = true;
             tb42_success = true;
